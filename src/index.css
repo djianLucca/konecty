@@ -1,5 +1,52 @@
+@import './styles/flexboxgrid.min.css';
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+@media only screen and (min-width:62em){
+  .col-md-offset-2-half {
+      margin-left: 19%;   
+  }
+
+  .col-md-5-half {
+    -ms-flex-preferred-size:46%;
+    flex-basis:46%;
+    max-width:46%;
+  }
+}
+.row {
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  flex: 0 1 auto;
+  -ms-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 1px solid white;
+  padding: 0.4em 2em;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.25em;
+  font-family: Lato;
+  font-weight: bold;
+  margin-right: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
 }
