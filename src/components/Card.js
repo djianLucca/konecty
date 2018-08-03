@@ -1,11 +1,13 @@
 import React from 'react'
-import { Card } from './../styles/styles'
+import { IconResponsive, Card, Col } from './../styles/styles'
 
 export default (props) => {
   return (
     <Card>
-      <img src={props.img} alt="img"></img>
-      {props.children}
+      <IconResponsive src={props.img} alt="img"></IconResponsive>
+      <Col>
+        {props.children}
+      </Col>
     </Card>
   )
 }

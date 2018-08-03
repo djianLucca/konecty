@@ -34,7 +34,7 @@ const Button = styled.button`
     border-radius:      5px;
     cursor:             pointer;
     width:              fit-content;
-    justify-content:    space-around;
+    justify-content:    center;
     margin-right:       1em;
 
     @media only screen and (max-width:62em){
@@ -58,6 +58,13 @@ const ButtonWrapper = styled.div`
 const Card = styled.div`
     margin-top:         3.5em;
     text-align:         center;
+    display:            flex;
+    flex-direction:     column;
+
+    @media only screen and (max-width:62em){
+        flex-direction:     row;
+        align-items:        start;
+    }
 `;
 
 const CardTitle = styled.div`
@@ -65,11 +72,25 @@ const CardTitle = styled.div`
     font-size:          1.5rem;
     font-weight:        700;
     margin:             2rem 0;
+
+    @media only screen and (max-width:62em){
+        margin:             1rem 0;
+    }
 `;
 
 const CardText = styled.div`
     color:              ${grey};
     font-size:          1.25rem;
+`;
+
+const Col = styled.div`
+    display:            flex;
+    flex-direction:     column;    
+
+    @media only screen and (max-width:62em){
+        text-align:         left;
+        margin-left:        1em;
+    }
 `;
 
 const Content = styled.div`
@@ -112,6 +133,16 @@ const Header = styled.div`
 const Icon = styled.i`
     font-size:          1.5em;
     margin-left:        0.5em;
+    color:              white;
+    cursor:             pointer;
+`;
+
+const IconResponsive = styled.img`
+    @media only screen and (max-width:62em){
+        width:              2.25em;
+        margin-top:         1em;
+        margin-left:        2em;
+    }
 `;
 
 const Input = styled.input`
@@ -122,7 +153,7 @@ const Input = styled.input`
     font-weight:        700;
     font-family:        Lato;
     border:             1px solid #979797;
-    color:              #4A4A4A;
+    color:              ${grey};
 `;
 
 const InputContainer = styled.div`
@@ -139,6 +170,40 @@ const Main = styled.div`
     padding-bottom:     8em;
 `;
 
+const Menu = styled.div`
+    position:           fixed;
+    background-color:   ${grey}f6;
+    width:              100%;
+    height:             100vh;
+    display:            flex;
+    flex-direction:     row;
+    align-itens:        start;
+    justify-content:    space-between;
+    top:                0;
+    left:               0;
+    font-size:          2rem;
+    font-family:        Lato;
+    
+    & a {
+        color:              white;
+        text-decoration:    none;
+        margin:             0.75em 0 0 1.5em;
+    }
+
+    & i {
+        margin:             0.5em 0.5em 0 0;
+    }
+`;
+
+const MenuItens = styled.div`
+    display:            flex;
+    flex-direction:     column;
+`;
+
+const MenuIcon = styled.img`
+    cursor:             pointer;
+`;
+
 const Navbar = styled.nav`
     width:              38rem;
     display:            flex;
@@ -152,6 +217,12 @@ const Navbar = styled.nav`
     }
 
     @media only screen and (max-width:62em){
+        display:            none;
+    }
+`;
+
+const NavbarResponsive = styled.div`    
+    @media only screen and (min-width:62em){
         display:            none;
     }
 `;
@@ -211,15 +282,21 @@ export {
     Card,
     CardTitle,
     CardText,
+    Col,
     Content,
     Email,
     Header,
     Icon,
+    IconResponsive,
     Input,
     InputContainer,
     Logo,
     Main,
+    Menu,
+    MenuIcon,
+    MenuItens,
     Navbar,
+    NavbarResponsive,
     Number,
     Text,
     TextArea,
