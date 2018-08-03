@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Navbar, Header } from './../styles/styles'
+import { Logo, Navbar, Header } from './../styles/styles'
 
 const logo = require('./../images/logo.svg');
 
@@ -9,7 +9,7 @@ export default () => {
         <Header>
             
             <Link to="/">
-                <img src={logo} alt="logo"/>
+                <Logo src={logo} alt="logo"/>
             </Link>
 
             <Navbar>
